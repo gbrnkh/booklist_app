@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Book List</h1>
+  
+  <!-- Kategori Section -->
+  <div id="category-section">
+    <h2>Categories</h2>
+    <form id="category-form">
+      <input type="text" id="category-name" placeholder="New Category" required>
+      <button type="submit">Add Category</button>
+    </form>
+    <ul id="categories-list"></ul>
+  </div>
+
+  <!-- Buku Section -->
+  <div id="book-section">
+    <h2>Books</h2>
+    <form id="book-form">
+      <input type="text" id="book-title" placeholder="Title" required>
+      <input type="text" id="book-author" placeholder="Author" required>
+      <input type="date" id="book-publication-date">
+      <input type="text" id="book-publisher" placeholder="Publisher">
+      <input type="number" id="book-pages" placeholder="Number of Pages">
+      <select id="book-category" required></select>
+      <button type="submit">Add Book</button>
+    </form>
+    <div id="filters">
+      <h3>Filter Books</h3>
+      <label for="filter-category">Category:</label>
+      <select id="filter-category">
+        <option value="">All Categories</option>
+      </select>
+      <label for="search-text">Search:</label>
+      <input type="text" id="search-text" placeholder="Search by title, author, or publisher">
+      <label for="filter-date">Publication Date:</label>
+      <input type="date" id="filter-date">
+      <button id="filter-button">Apply Filters</button>
+    </div>
+    <ul id="books-list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
